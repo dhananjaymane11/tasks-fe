@@ -1,12 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { StyleSheet, View } from 'react-native';
+import ToDo from './src/containers/toDo';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>This APP.js</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <SafeAreaView style={{ flex: 1 }}>
+        <View style={styles.container}>
+          <ToDo />
+        </View>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 
