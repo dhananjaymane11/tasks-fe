@@ -30,19 +30,17 @@ const ToDoContainer = () => {
       await updateTaskApi(id, data);
       setTasks(updateDataInArray(tasks, id, data));
     } else {
-      const newTask = {
-        ...data,
-        done: false,
-      };
-      const { insertedId } = await addTaskApi(newTask);
-      setTasks(addDataToArray(tasks, { ...newTask, _id: insertedId }));
+      const { insertedId } = await addTaskApi(data);
+      setTasks(
+        addDataToArray(tasks, { ...data, isDone: false, _id: insertedId }),
+      );
     }
   };
 
   const toggleTask = async (id) => {
-    const newStatus = !tasks.find((task) => task._id === id).done;
-    await updateTaskApi(id, { done: newStatus });
-    setTasks(updateDataInArray(tasks, id, { done: newStatus }));
+    const newStatus = !tasks.find((task) => task._id === id).isDone;
+    await updateTaskApi(id, { isDone: newStatus });
+    setTasks(updateDataInArray(tasks, id, { isDone: newStatus }));
   };
 
   const removeTask = async (id) => {

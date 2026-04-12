@@ -14,7 +14,7 @@ const toDoContent = ({ tasks, toggleTask, removeTask, handleShowModal }) => {
           <Title>{option.label}</Title>
           <FlatList
             data={tasks.filter((task) =>
-              task.selectedPriority === option.value ? task : null,
+              task.priority === option.value ? task : null,
             )}
             keyExtractor={(item) => item._id}
             renderItem={({ item }) => (

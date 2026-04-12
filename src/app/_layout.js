@@ -1,18 +1,27 @@
 import { Stack } from 'expo-router';
-import { getStoredToken } from '../api/store';
+import { AuthProvider, useAuth } from '../context/auth';
 
-export default function RootLayout() {
-  let token = getStoredToken();
+function RootLayoutNav() {
+  const { isLoggedIn } = useAuth();
 
   return (
     <Stack>
-      <Stack.Protected guard={token}>
+      <Stack.Protected guard={!!isLoggedIn}>
+        <Stack.Screen name="about/index" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       </Stack.Protected>
 
-      <Stack.Protected guard={!token}>
+      <Stack.Protected guard={!isLoggedIn}>
         <Stack.Screen name="login/index" options={{ headerShown: false }} />
       </Stack.Protected>
     </Stack>
+  );
+}
+
+export default function RootLayout() {
+  return (
+    <AuthProvider>
+      <RootLayoutNav />
+    </AuthProvider>
   );
 }

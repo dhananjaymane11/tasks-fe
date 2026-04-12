@@ -26,8 +26,8 @@ export const TaskEditButton = styled.TouchableOpacity`
 `;
 
 export const TaskText = styled.Text`
-  color: ${(props) => (props.done ? '#90a4ae' : '#1f2937')};
-  text-decoration-line: ${(props) => (props.done ? 'line-through' : 'none')};
+  color: ${(props) => (props.isDone ? '#90a4ae' : '#1f2937')};
+  text-decoration-line: ${(props) => (props.isDone ? 'line-through' : 'none')};
   font-size: 16px;
 `;
 

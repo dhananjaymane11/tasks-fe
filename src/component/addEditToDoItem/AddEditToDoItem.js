@@ -14,7 +14,7 @@ import {
 const AddEditToDoItem = ({ addEditTask, taskToEdit }) => {
   const [input, setInput] = useState(taskToEdit ? taskToEdit.title : '');
   const [selectedPriority, setSelectedPriority] = useState(
-    taskToEdit ? taskToEdit.selectedPriority : 1,
+    taskToEdit ? taskToEdit.priority : 1,
   );
 
   const handleAddTask = () => {
@@ -22,7 +22,7 @@ const AddEditToDoItem = ({ addEditTask, taskToEdit }) => {
     if (!title) return;
 
     addEditTask(
-      { title, selectedPriority: +selectedPriority },
+      { title, priority: +selectedPriority },
       taskToEdit ? taskToEdit._id : null,
     );
     setInput('');

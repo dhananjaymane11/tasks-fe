@@ -15,13 +15,13 @@ const ToDoItem = ({ item, toggleTask, removeTask, handleShowModal }) => {
     <ItemContainer>
       <TextWrapper>
         <Checkbox
-          value={item.done}
+          value={item.isDone}
           onValueChange={() => toggleTask(item._id)}
-          color={item.done ? '#2f80ed' : undefined}
+          color={item.isDone ? '#2f80ed' : undefined}
         />
         <TaskEditButton onPress={() => handleShowModal(item._id)}>
-          <TaskText done={item.done}>
-            {item.title} - {item.selectedPriority}
+          <TaskText isDone={item.isDone}>
+            {item.title} - {item.priority}
           </TaskText>
         </TaskEditButton>
       </TextWrapper>

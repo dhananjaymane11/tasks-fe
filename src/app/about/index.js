@@ -1,9 +1,11 @@
 import { View, Text, StyleSheet } from 'react-native';
+import { Link } from 'expo-router';
 
-export default function Tab() {
+export default function about() {
   return (
     <View style={styles.container}>
-      <Text>Tab [Setting]</Text>
+      <Text>about</Text>
+      <Link href="/">(tabs)</Link>
     </View>
   );
 }
