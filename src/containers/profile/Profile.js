@@ -1,9 +1,10 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
 
-export default function Notes() {
+export default function Profile({ onLogout }) {
   return (
     <View style={styles.container}>
-      <Text>Notes</Text>
+      <Text>Profile</Text>
+      <Button title="Logout" onPress={onLogout} />
     </View>
   );
 }

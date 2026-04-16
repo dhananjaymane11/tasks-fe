@@ -1,17 +1,5 @@
-import { View, Text, StyleSheet } from 'react-native';
+import NotesContainer from '../../containers/notes';
 
 export default function Notes() {
-  return (
-    <View style={styles.container}>
-      <Text>Tab [Notes]</Text>
-    </View>
-  );
+  return <NotesContainer />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});

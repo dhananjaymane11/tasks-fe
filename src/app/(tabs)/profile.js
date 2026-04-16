@@ -1,17 +1,5 @@
-import { View, Text, StyleSheet } from 'react-native';
+import ProfileContainer from '../../containers/profile';
 
 export default function Profile() {
-  return (
-    <View style={styles.container}>
-      <Text>Tab [Profile]</Text>
-    </View>
-  );
+  return <ProfileContainer />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});

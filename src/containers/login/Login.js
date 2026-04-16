@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from 'react-native';
-import { useRouter } from 'expo-router';
 import { validateEmail, validateOtp } from '../../util';
-import { useAuth } from '../../context/auth';
 
 import {
   Header,
@@ -13,17 +11,16 @@ import {
   StyledTextInput,
 } from './Login.style';
 
-const Login = () => {
+const Login = ({ onSendOtp, onVerifyOtp }) => {
   const [screen, setScreen] = useState('email');
   const [email, setEmail] = useState('');
   const [otp, setOtp] = useState('');
   const [error, setError] = useState('');
-  const router = useRouter();
-  const { storeTokenFromContext } = useAuth();
 
-  const handleSendOTP = () => {
+  const handleSendOTP = async () => {
     if (validateEmail(email)) {
       setError('');
+      await onSendOtp({ email });
       setScreen('otp');
     } else {
       setError('Enter valid email id');
@@ -33,8 +30,7 @@ const Login = () => {
   const handleVerifyOTP = async () => {
     if (validateOtp(otp)) {
       setError('');
-      await storeTokenFromContext('token');
-      router.navigate('/');
+      await onVerifyOtp({ email, otp });
     } else {
       setError('Enter valid OTP');
     }

@@ -1,5 +1,5 @@
 import ToDoContainer from '../../containers/toDo';
 
-export default function Tab() {
+export default function ToDo() {
   return <ToDoContainer />;
 }

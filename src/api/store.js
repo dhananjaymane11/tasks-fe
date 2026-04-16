@@ -24,7 +24,7 @@ export const storeToken = async (token) => {
   }
 };
 
-export const clearTokens = async () => {
+export const clearToken = async () => {
   try {
     if (isWeb) {
       localStorage.removeItem('accessToken');
