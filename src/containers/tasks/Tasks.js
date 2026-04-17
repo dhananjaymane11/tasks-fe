@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Entypo from '@expo/vector-icons/Entypo';
 
-import { ToDoContent, AddEditToDoItem, Modal } from '../../component';
-import { Header, Container, Title, AddButton } from './ToDo.style';
+import { TasksContent, AddEditTasksItem, Modal } from '../../component';
+import { Header, Container, Title, AddButton } from './Tasks.style';
 
-const ToDo = ({ tasks, addEditTask, toggleTask, removeTask }) => {
+const Tasks = ({ tasks, addEditTask, toggleTask, removeTask }) => {
   const [taskToEdit, setTaskToEdit] = useState(null);
   const [showModal, setShowModal] = useState(false);
 
@@ -22,13 +22,13 @@ const ToDo = ({ tasks, addEditTask, toggleTask, removeTask }) => {
   return (
     <Container>
       <Header>
-        <Title>ToDo List</Title>
+        <Title>Tasks List</Title>
         <AddButton onPress={handleShowModal} activeOpacity={0.8}>
           <Entypo name="plus" size={24} color="black" />
         </AddButton>
       </Header>
 
-      <ToDoContent
+      <TasksContent
         tasks={tasks}
         toggleTask={toggleTask}
         removeTask={removeTask}
@@ -40,7 +40,7 @@ const ToDo = ({ tasks, addEditTask, toggleTask, removeTask }) => {
         title={taskToEdit ? 'Edit Todo' : 'Add Todo'}
         setShowModal={setShowModal}
       >
-        <AddEditToDoItem
+        <AddEditTasksItem
           addEditTask={handleAddEditTask}
           taskToEdit={taskToEdit}
           setShowModal={setShowModal}
@@ -50,4 +50,4 @@ const ToDo = ({ tasks, addEditTask, toggleTask, removeTask }) => {
   );
 };
 
-export default ToDo;
+export default Tasks;

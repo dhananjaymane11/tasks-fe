@@ -3,15 +3,15 @@ import { Keyboard } from 'react-native';
 import Entypo from '@expo/vector-icons/Entypo';
 import { Picker } from '@react-native-picker/picker';
 
-import { toDoSelectOptions } from '../../constants';
+import { tasksSelectOptions } from '../../constants';
 import {
   Wrapper,
   InputRow,
-  ToDoInput,
+  TasksInput,
   AddButton,
-} from './AddEditToDoItem.style';
+} from './AddEditTasksItem.style';
 
-const AddEditToDoItem = ({ addEditTask, taskToEdit }) => {
+const AddEditTasksItem = ({ addEditTask, taskToEdit }) => {
   const [input, setInput] = useState(taskToEdit ? taskToEdit.title : '');
   const [selectedPriority, setSelectedPriority] = useState(
     taskToEdit ? taskToEdit.priority : 1,
@@ -32,7 +32,7 @@ const AddEditToDoItem = ({ addEditTask, taskToEdit }) => {
   return (
     <Wrapper>
       <InputRow>
-        <ToDoInput
+        <TasksInput
           value={input}
           onChangeText={setInput}
           placeholder="What do you need to do?"
@@ -48,7 +48,7 @@ const AddEditToDoItem = ({ addEditTask, taskToEdit }) => {
         selectedValue={selectedPriority}
         onValueChange={(itemValue) => setSelectedPriority(itemValue)}
       >
-        {toDoSelectOptions.map((option) => (
+        {tasksSelectOptions.map((option) => (
           <Picker.Item
             key={option.value}
             label={option.label}
@@ -60,4 +60,4 @@ const AddEditToDoItem = ({ addEditTask, taskToEdit }) => {
   );
 };
 
-export default AddEditToDoItem;
+export default AddEditTasksItem;

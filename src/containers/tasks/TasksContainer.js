@@ -12,9 +12,9 @@ import {
   removeDataFromArray,
   updateDataInArray,
 } from '../../util';
-import ToDo from './ToDo';
+import Tasks from './Tasks';
 
-const ToDoContainer = () => {
+const TasksContainer = () => {
   const [tasks, setTasks] = useState([]);
   const apiCall = useApiCall();
 
@@ -51,7 +51,7 @@ const ToDoContainer = () => {
   };
 
   return (
-    <ToDo
+    <Tasks
       tasks={tasks}
       setTasks={setTasks}
       addEditTask={addEditTask}
@@ -61,4 +61,4 @@ const ToDoContainer = () => {
   );
 };
 
-export default ToDoContainer;
+export default TasksContainer;

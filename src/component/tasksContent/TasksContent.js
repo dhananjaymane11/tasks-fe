@@ -1,16 +1,16 @@
 import React from 'react';
 import { FlatList } from 'react-native';
 
-import ToDoItem from '../toDoItem/ToDoItem';
-import { toDoSelectOptions } from '../../constants';
+import TasksItem from '../tasksItem/TasksItem';
+import { tasksSelectOptions } from '../../constants';
 
-import { BoxWrapper, ToDoBox, Title, EmptyText } from './ToDoContent.style';
+import { BoxWrapper, TasksBox, Title, EmptyText } from './TasksContent.style';
 
-const toDoContent = ({ tasks, toggleTask, removeTask, handleShowModal }) => {
+const tasksContent = ({ tasks, toggleTask, removeTask, handleShowModal }) => {
   return (
     <BoxWrapper>
-      {toDoSelectOptions.map((option) => (
-        <ToDoBox key={option.value}>
+      {tasksSelectOptions.map((option) => (
+        <TasksBox key={option.value}>
           <Title>{option.label}</Title>
           <FlatList
             data={tasks.filter((task) =>
@@ -18,7 +18,7 @@ const toDoContent = ({ tasks, toggleTask, removeTask, handleShowModal }) => {
             )}
             keyExtractor={(item) => item._id}
             renderItem={({ item }) => (
-              <ToDoItem
+              <TasksItem
                 item={item}
                 toggleTask={toggleTask}
                 removeTask={removeTask}
@@ -30,10 +30,10 @@ const toDoContent = ({ tasks, toggleTask, removeTask, handleShowModal }) => {
               <EmptyText>No todos yet. Add one above!</EmptyText>
             }
           />
-        </ToDoBox>
+        </TasksBox>
       ))}
     </BoxWrapper>
   );
 };
 
-export default toDoContent;
+export default tasksContent;

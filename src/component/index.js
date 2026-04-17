@@ -1,6 +1,6 @@
-import AddEditToDoItem from './addEditToDoItem/AddEditToDoItem';
-import ToDoContent from './toDoContent/ToDoContent';
-import ToDoItem from './toDoItem/ToDoItem';
+import AddEditTasksItem from './addEditTasksItem/AddEditTasksItem';
+import TasksContent from './tasksContent/TasksContent';
+import TasksItem from './tasksItem/TasksItem';
 import Modal from './modal/Modal';
 
-export { AddEditToDoItem, ToDoContent, ToDoItem, Modal };
+export { AddEditTasksItem, TasksContent, TasksItem, Modal };

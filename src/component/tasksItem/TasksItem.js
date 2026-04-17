@@ -8,9 +8,9 @@ import {
   TaskText,
   TaskEditButton,
   RemoveButton,
-} from './ToDoItem.style';
+} from './TasksItem.style';
 
-const ToDoItem = ({ item, toggleTask, removeTask, handleShowModal }) => {
+const TasksItem = ({ item, toggleTask, removeTask, handleShowModal }) => {
   return (
     <ItemContainer>
       <TextWrapper>
@@ -32,4 +32,4 @@ const ToDoItem = ({ item, toggleTask, removeTask, handleShowModal }) => {
   );
 };
 
-export default ToDoItem;
+export default TasksItem;

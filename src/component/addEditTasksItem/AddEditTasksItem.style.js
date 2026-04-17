@@ -7,7 +7,7 @@ export const InputRow = styled.View`
   margin-bottom: 15px;
 `;
 
-export const ToDoInput = styled.TextInput`
+export const TasksInput = styled.TextInput`
   background: #ffffff;
   border-radius: 12px;
   padding: 12px;

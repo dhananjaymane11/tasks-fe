@@ -1,5 +1,5 @@
-import ToDoContainer from '../../containers/toDo';
+import TasksContainer from '../../containers/tasks';
 
-export default function ToDo() {
-  return <ToDoContainer />;
+export default function Tasks() {
+  return <TasksContainer />;
 }

@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const BoxWrapper = styled.View``;
 
-export const ToDoBox = styled.View`
+export const TasksBox = styled.View`
   background-color: #fff;
   padding: 15px;
   margin-bottom: 10px;
