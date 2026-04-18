@@ -7,7 +7,6 @@ function RootLayoutNav() {
   return (
     <Stack>
       <Stack.Protected guard={!!isLoggedIn}>
-        <Stack.Screen name="about/index" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       </Stack.Protected>
 

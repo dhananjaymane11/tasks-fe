@@ -22,7 +22,7 @@ const Tasks = ({ tasks, addEditTask, toggleTask, removeTask }) => {
   return (
     <Container>
       <Header>
-        <Title>Tasks List</Title>
+        <Title>Tasks</Title>
         <AddButton onPress={handleShowModal} activeOpacity={0.8}>
           <Entypo name="plus" size={24} color="black" />
         </AddButton>
@@ -37,7 +37,7 @@ const Tasks = ({ tasks, addEditTask, toggleTask, removeTask }) => {
 
       <Modal
         showModal={showModal}
-        title={taskToEdit ? 'Edit Todo' : 'Add Todo'}
+        title={taskToEdit ? 'Edit Task' : 'Add Task'}
         setShowModal={setShowModal}
       >
         <AddEditTasksItem

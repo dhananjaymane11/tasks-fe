@@ -8,7 +8,8 @@ export const InputRow = styled.View`
 `;
 
 export const TasksInput = styled.TextInput`
-  background: #ffffff;
+  background: #111;
+  color: #fff;
   border-radius: 12px;
   padding: 12px;
   font-size: 16px;

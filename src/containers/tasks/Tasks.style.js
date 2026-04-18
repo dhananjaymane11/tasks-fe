@@ -2,8 +2,8 @@ import styled from 'styled-components/native';
 
 export const Container = styled.SafeAreaView`
   flex: 1;
-  background-color: #f0f4f8;
-  padding: 20px;
+  background-color: #111;
+  padding: 20px 10px;
   width: 100%;
 `;
 
@@ -11,13 +11,12 @@ export const Header = styled.View`
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 `;
 
 export const Title = styled.Text`
   font-size: 24px;
-  font-weight: 800;
-  color: #263238;
+  color: #fff;
 `;
 
 export const AddButton = styled.TouchableOpacity`

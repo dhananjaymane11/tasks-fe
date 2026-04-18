@@ -26,9 +26,7 @@ const tasksContent = ({ tasks, toggleTask, removeTask, handleShowModal }) => {
               />
             )}
             showsVerticalScrollIndicator={false}
-            ListEmptyComponent={
-              <EmptyText>No todos yet. Add one above!</EmptyText>
-            }
+            ListEmptyComponent={<EmptyText>No Tasks</EmptyText>}
           />
         </TasksBox>
       ))}

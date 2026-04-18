@@ -24,7 +24,7 @@ const Modal = ({ showModal, setShowModal, title, children }) => {
           <Header>
             <Title>{title}</Title>
             <CloseButton onPress={() => setShowModal(false)}>
-              <Ionicons name="close" size={24} color="black" />
+              <Ionicons name="close" size={24} color="white" />
             </CloseButton>
           </Header>
           <ChildrenWrapper>{children}</ChildrenWrapper>

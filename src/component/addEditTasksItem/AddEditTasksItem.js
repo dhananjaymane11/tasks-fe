@@ -35,7 +35,7 @@ const AddEditTasksItem = ({ addEditTask, taskToEdit }) => {
         <TasksInput
           value={input}
           onChangeText={setInput}
-          placeholder="What do you need to do?"
+          placeholder="What would you like to do?"
           returnKeyType="done"
           onSubmitEditing={handleAddTask}
         />

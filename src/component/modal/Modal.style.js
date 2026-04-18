@@ -8,7 +8,7 @@ export const BackDrop = styled.View`
 
 export const ModalContent = styled.View`
   height: 50%;
-  background-color: white;
+  background-color: #111;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   padding: 15px;
@@ -26,6 +26,7 @@ export const Header = styled.View`
 export const Title = styled.Text`
   font-size: 18px;
   font-weight: bold;
+  color: #fff;
 `;
 
 export const CloseButton = styled.TouchableOpacity``;

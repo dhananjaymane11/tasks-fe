@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.SafeAreaView`
   flex: 1;
-  background-color: #f0f4f8;
+  background-color: #111;
   padding: 20px;
   width: 100%;
 `;
@@ -30,7 +30,7 @@ export const InputWrapper = styled.View``;
 
 export const StyledTextInput = styled.TextInput`
   padding: 10px;
-  background: white;
+  background: #111;
   margin-bottom: 10px;
   line-height: 20px;
 `;
