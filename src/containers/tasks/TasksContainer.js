@@ -53,7 +53,6 @@ const TasksContainer = () => {
   return (
     <Tasks
       tasks={tasks}
-      setTasks={setTasks}
       addEditTask={addEditTask}
       toggleTask={toggleTask}
       removeTask={removeTask}

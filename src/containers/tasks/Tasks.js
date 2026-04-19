@@ -9,8 +9,8 @@ const Tasks = ({ tasks, addEditTask, toggleTask, removeTask }) => {
   const [showModal, setShowModal] = useState(false);
 
   const handleShowModal = (id) => {
-    const taskToEdit = id && tasks.find((task) => task._id === id);
-    setTaskToEdit(taskToEdit || null);
+    const taskToEditLocal = id && tasks.find((task) => task._id === id);
+    setTaskToEdit(taskToEditLocal || null);
     setShowModal(true);
   };
 

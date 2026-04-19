@@ -1,9 +1,11 @@
 import styled from 'styled-components/native';
 
-export const ItemContainer = styled.View`
+export const NotesBox = styled.View`
+  background-color: #2c2c2c;
+  padding: 10px;
+  border-radius: 8px;
   margin-bottom: 10px;
   flex-direction: row;
-  justify-content: space-between;
 `;
 
 export const TextWrapper = styled.View`
@@ -11,15 +13,19 @@ export const TextWrapper = styled.View`
   flex-grow: 1;
 `;
 
-export const TaskEditButton = styled.TouchableOpacity`
+export const NoteEditButton = styled.TouchableOpacity`
   margin-left: 5px;
   margin-top: -1px;
 `;
 
-export const TaskText = styled.Text`
-  color: ${(props) => (props.isDone ? '#eee' : '#fff')};
-  text-decoration-line: ${(props) => (props.isDone ? 'line-through' : 'none')};
+export const NoteText = styled.Text`
+  color: #fff;
   font-size: 14px;
+`;
+
+export const NoteDescription = styled.Text`
+  color: #fff;
+  font-size: 12px;
 `;
 
 export const RemoveButton = styled.TouchableOpacity``;

@@ -17,7 +17,7 @@ export const Header = styled.View`
 export const Title = styled.Text`
   font-size: 24px;
   font-weight: 800;
-  color: #263238;
+  color: #fff;
 `;
 
 export const Error = styled.Text`
@@ -33,4 +33,8 @@ export const StyledTextInput = styled.TextInput`
   background: #111;
   margin-bottom: 10px;
   line-height: 20px;
+  color: #fff;
+  border-style: solid;
+  border-bottom-width: 1px;
+  border-color: rgb(255, 255, 255);
 `;

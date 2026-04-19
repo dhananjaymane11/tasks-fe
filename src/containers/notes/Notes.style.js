@@ -19,6 +19,14 @@ export const Title = styled.Text`
   color: #fff;
 `;
 
+export const NotesContent = styled.View``;
+
+export const EmptyText = styled.Text`
+  color: #aaa;
+  font-size: 13px;
+  text-align: center;
+`;
+
 export const AddButton = styled.TouchableOpacity`
   background: #2f80ed;
   padding: 4px 8px;
