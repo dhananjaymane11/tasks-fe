@@ -28,6 +28,7 @@ const useApiCall = (isSecure = true) => {
 
       return await response.json();
     } catch (error) {
+      removeTokenFromContext();
       console.error('API call failed:', error);
       throw error;
     }
